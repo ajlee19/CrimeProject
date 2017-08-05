@@ -539,7 +539,7 @@ section {
 }
 
 #contactform input {
-	border:0px;
+/*	border:0px;
 	border-bottom:2px solid #ffffff;
 	width:100%;
 	background-color:transparent;
@@ -547,7 +547,7 @@ section {
 	color:#fff;
 	text-transform:uppercase;
 	letter-spacing:2px;
-	margin-bottom:20px;
+	margin-bottom:20px;*/
 }
 #contactform input #submit {
 	width:auto;
