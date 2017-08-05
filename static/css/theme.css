@@ -115,6 +115,13 @@ a:hover,a:focus {
 	}
 }
 
+
+
+
+
+
+
+
 .intro {
 	display:table;
 	width:100%;
@@ -158,6 +165,13 @@ a:hover,a:focus {
 			letter-spacing:3px;
 	}
 }
+
+
+
+
+
+
+
 
 .map {
 	display:table;
@@ -203,7 +217,17 @@ a:hover,a:focus {
 	}
 }
 
-.map {
+
+
+
+
+
+
+
+
+
+
+.contact {
 	display:table;
 	width:100%;
 	height:auto;
@@ -216,22 +240,22 @@ a:hover,a:focus {
 	background-size:cover;
 	-o-background-size:cover;
 }
-.map .map-body {
+.contact .contact-body {
 	display:table-cell;
 	vertical-align:middle;
 }
-.map .map-body .brand-heading {
+.contact .contact-body .brand-heading {
 	font-size:40px;
 }
-.map .map-body .map-text {
+.contact .contact-body .contact-text {
 	font-size:18px;
 }
 @media(min-width:768px) {
-	.map {
+	.contact {
 		height:100%;
 		padding:0;
 	}
-	.map .map-body .brand-heading {
+	.contact .contact-body .brand-heading {
 		font-size:60px;
 		margin-top:90px;
 		margin-bottom:20px;
@@ -240,7 +264,7 @@ a:hover,a:focus {
 		display:inline-block;
 		padding:10px 0;
 	}
-	.map .map-body .map-text {
+	.contact .contact-body .contact-text {
 		font-size:20px;
 			font-weight:300;
 			letter-spacing:3px;
