@@ -1,11 +1,17 @@
+
+
 //////CONTACT FORM VALIDATION
 jQuery(document).ready(function ($) {
 	
 	
 	$("loc").on("keydown",function search(e) {
-	    if(e.keyCode == 13) {
-	        document.getElementById("mapview").scrollIntoView()
-	    }
+		var address = $('input[name=address]')
+		var map = document.getElementById("mapview")
+		map[frameborder=address] 
+		// document.getElementById("mapview").scrollIntoView()
+	 //    if(e.keyCode == 13) {
+	 //        document.getElementById("mapview").scrollIntoView()
+	 //    }
 	});
 
 	//if submit button is clicked
