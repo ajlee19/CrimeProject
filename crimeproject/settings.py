@@ -34,9 +34,9 @@ SECRET_KEY = '9mybicdxst^a7ez7%=w1v5i&zt2-c3_#y0b=sba@flcz=h)i97'
 SITE_ID = int(os.environ.get("SITE_ID", 1))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
+DEBUG = True
 
-ALLOWED_HOSTS = ['stayfe-dev.us-west-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['127.0.0.1','stayfe-dev.us-west-1.elasticbeanstalk.com', '*']
 
 ROOT_URLCONF = 'crimeproject.urls'
 
