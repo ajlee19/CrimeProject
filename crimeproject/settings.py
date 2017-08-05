@@ -68,7 +68,7 @@ MIDDLEWARE_CLASSES = [
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 STATIC_URL = "/static/"
-STATIC_ROOT = "/visualizemap/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # List of finder classes that know how to find static files in
 # various locations.
 STATICFILES_FINDERS = [

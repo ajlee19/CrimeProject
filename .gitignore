@@ -5,3 +5,8 @@ myvenv
 db.sqlite3
 /static
 .DS_Store
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
