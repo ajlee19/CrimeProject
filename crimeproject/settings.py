@@ -36,7 +36,7 @@ SITE_ID = int(os.environ.get("SITE_ID", 1))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'www.stayfe.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'www.stayfe.com', 'stayfe-dev2.us-west-1.elasticbeanstalk.com']
 
 ROOT_URLCONF = 'crimeproject.urls'
 
