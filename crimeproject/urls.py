@@ -22,10 +22,10 @@ from . import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.index, name='index'),
-    url(r'^base.html$', views.main, name='main'),
-    url(r'^_intro.html$', views.intro, name='intro'),
-    url(r'^_content.html$', views.content, name='content'),
-    url(r'^_contact.html$', views.contact, name='contact'),
-    url(r'^map.html$', views.map, name='map'),
+    url(r'^stayfe.html$', views.main, name='main'),
+    url(r'^aboutus.html$', views.intro, name='intro'),
+    url(r'^map.html$', views.content, name='content'),
+    url(r'^contacts.html$', views.contact, name='contact'),
+    url(r'^_map.html$', views.map, name='map'),
     url(r'^visualizemap/', include('visualizemap.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,132 +1,100 @@
-<!doctype html>
-<html>
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>mapbox</title>
-  <script src='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js'></script>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet' />
-  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.0/mapbox-gl-geocoder.min.js'></script>
-  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.1.0/mapbox-gl-geocoder.css' type='text/css' />
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="Ashley Jieun Lee and Seung Woo Son">
+<title>Stayfe</title>
+<!-- Bootstrap Core CSS -->
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="{% static 'css/theme.css' %}" rel="stylesheet">
+<!-- Custom Fonts -->
+<link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic,700italic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
 </head>
-<body>
-<div id='map' style='width: 100vw; height: 100vh; top: 0px; left: 0px; position: absolute;'></div>
-
-<div id='sidebar' style='width: 400px; height: 100vh; background: #efeff4; left: 0px; top: 0px; z-index: 1000; position: absolute;'>
-  <ul>
-    <li id='linkonefly'><a href='#'>San Jose</a></li>
-  </ul>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<!-- Navigation -->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<div class="container">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+		<i class="fa fa-bars"></i>
+		</button>
+		<a class="navbar-brand page-scroll" href="stayfe.html">STAYFE</a>
+	</div>
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+		<ul class="nav navbar-nav">
+			<li>
+			<a href="aboutus.html">About Us</a>
+			</li>
+			<li>
+			<a href="map.html">Map</a>
+			</li>
+			<li>
+			<a href="contacts.html">Contacts</a>
+			</li>
+		</ul>
+	</div>
+	<!-- /.navbar-collapse -->
 </div>
-
-<div id='sidebarArea' style='width: 100px; height: 100vh; left: 0px; top: 0px; z-index: 1000; position: absolute;'></div>
-
-<script>
-
-mapboxgl.accessToken = 'pk.eyJ1Ijoic2hlbGV5MTk5OCIsImEiOiJjajVpNGw0ZTMxYzluMnFqanUwbjh2NnY4In0.hTTY6gII0E2vjipIjvu01Q';
-
-var map = new mapboxgl.Map
-({
-  container : 'map',
-  style : 'mapbox://styles/mapbox/streets-v10',
-  center: [-121.53, 27.20],
-  zoom: 1
-});
-
-map.addControl(new MapboxGeocoder({
-    accessToken: mapboxgl.accessToken
-}));
-
-
-map.addControl(new mapboxgl.NavigationControl());
-
-var $sidebar = $('#sidebar');
-$sidebar.css('transform', 'translateX(-100%)').css('transition', 'all 350ms linear 0ms');
-
-var $sidebarArea = $('#sidebarArea');
-
-$sidebarArea.mouseenter(function()
-{
-  $sidebar.css('transform', 'translateX(0px)').css('z-index', 1001);
-});
-
-$sidebar.mouseleave(function()
-{
-  $sidebar.css('transform', 'translateX(-100%)').css('z-index', 1000);
-});
-
-document.getElementById('linkonefly').addEventListener('click', function () {
-    map.flyTo({
-        center: [-121.53,37.20],
-        zoom: 9
-
-    });
-});
-
-map.on('load', function() {
-console.log('finished');
-    map.addSource("earthquakes", {
-        type: "geojson",
-        data: "http://127.0.0.1:8080/earthquakes.geojson",
-        cluster: true,
-        clusterMaxZoom: 14, // Max zoom to cluster points on
-        clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
-    });
-
-    map.addLayer({
-        id: "clusters",
-        type: "circle",
-        source: "earthquakes",
-        filter: ["has", "point_count"],
-        paint: {
-            "circle-color": {
-                property: "point_count",
-                type: "interval",
-                stops: [
-                    [0, "#51bbd6"],
-                    [100, "#f1f075"],
-                    [750, "#f28cb1"],
-                ]
-            },
-            "circle-radius": {
-                property: "point_count",
-                type: "interval",
-                stops: [
-                    [0, 20],
-                    [100, 30],
-                    [750, 40]
-                ]
-            }
-        }
-    });
-
-    map.addLayer({
-        id: "cluster-count",
-        type: "symbol",
-        source: "earthquakes",
-        filter: ["has", "point_count"],
-        layout: {
-            "text-field": "{point_count_abbreviated}",
-            "text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
-            "text-size": 12
-        }
-    });
-
-    map.addLayer({
-        id: "unclustered-point",
-        type: "circle",
-        source: "earthquakes",
-        filter: ["!has", "point_count"],
-        paint: {
-            "circle-color": "#11b4da",
-            "circle-radius": 4,
-            "circle-stroke-width": 1,
-            "circle-stroke-color": "#fff"
-        }
-    });
-});
-
-
-</script>
+<!-- /.container -->
+</nav>
+<!-- Intro Header -->
+<header class="intro">
+<div class="intro-body">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<h1 class="brand-heading">Crime Map</h1>
+				<p class="intro-text">
+					We provide data and service that will keep people safe at anytime at anywhere ... <br><br>
+				</p>
+				<form id = "contactform">
+					<input type="addresssearch" name="address" placeholder="WHERE ARE YOU NOW? e.g. mission and 18th streets, san francisco">
+				</form>
+				var input = document.getElementById('pac-input');
+        		var searchBox = new google.maps.places.SearchBox(input);
+				<a href="#single-project" class="btn btn-circle page-scroll">
+				<i class="fa fa-angle-double-down animated"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+</header>
+<!-- Project Details Section -->
+<section id="single-project"> 
+<div class="container content-section text-center">
+	<div>
+	<iframe width="100%" height="520" frameborder="0" src="https://alee19.carto.com/builder/5cc27bd2-7827-11e7-bf0c-0e8c56e2ffdb/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+	</div>
+	<div class="row">
+		<h2><br><br><br>Overview</h2>
+		<div class="col-lg-8 col-lg-offset-2">
+			<p>
+				We collect data from the official police report, news media, and social media ... <br>
+				Processed data are visualized via user-friendly and interactive map ... <br>
+<!-- 				<a href="https://alee19.carto.com/builder/5cc27bd2-7827-11e7-bf0c-0e8c56e2ffdb/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen><br>LINK TO FULL SCREEN MAP</a> -->
+		</div>
+	</div>
+</div>
+</section>
+<!-- jQuery -->
+<script src="{% static 'js/jquery.js' %}"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<!-- Plugin JavaScript -->
+<script src="{% static 'js/jquery.easing.min.js' %}"></script>
+<!-- Contact JavaScript -->
+<script src="{% static 'js/validate.js' %}"></script>
+<!-- Custom Theme JavaScript -->
+<script src="{% static 'js/theme.js' %}"></script>
 </body>
 </html>

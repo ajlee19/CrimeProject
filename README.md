@@ -1,3 +1,3 @@
 # CrimeProject
 
-Base for creating WebApp using Django and Carto
+Django Project for WWW.STAYFE.COM featuring data collected and visualized. 
