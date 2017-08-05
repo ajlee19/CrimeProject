@@ -121,7 +121,7 @@ a:hover,a:focus {
 	padding:100px 0 100px 0;
 	text-align:center;
 	color:#fff;
-	background-image: none;
+	background-image: radial-gradient(circle at 50% 50%,rgba(0,0,0,0.46),rgba(0,0,0,0.88)),url('https://source.unsplash.com/collection/1068999/1800x1600');
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	background-size:cover;
