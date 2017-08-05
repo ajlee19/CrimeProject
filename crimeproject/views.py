@@ -20,3 +20,8 @@ def contact(request):
 def main(request):
     template = loader.get_template('base.html')
     return HttpResponse(template.render())
+
+def map(request):
+    template = loader.get_template('map.html')
+    return HttpResponse(template.render())
+

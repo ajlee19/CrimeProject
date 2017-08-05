@@ -26,5 +26,6 @@ urlpatterns = [
     url(r'^_intro.html$', views.intro, name='intro'),
     url(r'^_content.html$', views.content, name='content'),
     url(r'^_contact.html$', views.contact, name='contact'),
+    url(r'^map.html$', views.map, name='map'),
     url(r'^visualizemap/', include('visualizemap.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
