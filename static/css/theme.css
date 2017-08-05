@@ -114,6 +114,7 @@ a:hover,a:focus {
 		display:inline-block;
 	}
 }
+
 .intro {
 	display:table;
 	width:100%;
@@ -121,7 +122,7 @@ a:hover,a:focus {
 	padding:100px 0 100px 0;
 	text-align:center;
 	color:#fff;
-	background-image: radial-gradient(circle at 50% 50%,rgba(0,0,0,0.46),rgba(0,0,0,0.88)),url('https://source.unsplash.com/collection/1068999/1800x1600');
+	background-image: radial-gradient(circle at 50% 50%,rgba(0,0,0,0.46),rgba(0,0,0,0.88)),url('https://source.unsplash.com/n7n-nkadHRM/1800x1600');
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	background-size:cover;
@@ -157,6 +158,95 @@ a:hover,a:focus {
 			letter-spacing:3px;
 	}
 }
+
+.map {
+	display:table;
+	width:100%;
+	height:auto;
+	padding:100px 0 100px 0;
+	text-align:center;
+	color:#fff;
+	background-image: radial-gradient(circle at 50% 50%,rgba(0,0,0,0.46),rgba(0,0,0,0.88)),url('https://source.unsplash.com/RA5ntyyDHlw/1800x1600');
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	background-size:cover;
+	-o-background-size:cover;
+}
+.map .map-body {
+	display:table-cell;
+	vertical-align:middle;
+}
+.map .map-body .brand-heading {
+	font-size:40px;
+}
+.map .map-body .map-text {
+	font-size:18px;
+}
+@media(min-width:768px) {
+	.map {
+		height:100%;
+		padding:0;
+	}
+	.map .map-body .brand-heading {
+		font-size:60px;
+		margin-top:90px;
+		margin-bottom:20px;
+		border-top:2px solid #fff;
+		border-bottom:2px solid #fff;
+		display:inline-block;
+		padding:10px 0;
+	}
+	.map .map-body .map-text {
+		font-size:20px;
+			font-weight:300;
+			letter-spacing:3px;
+	}
+}
+
+.map {
+	display:table;
+	width:100%;
+	height:auto;
+	padding:100px 0 100px 0;
+	text-align:center;
+	color:#fff;
+	background-image: radial-gradient(circle at 50% 50%,rgba(0,0,0,0.46),rgba(0,0,0,0.88)),url('https://source.unsplash.com/ujhKqutt3f0/1800x1600');
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	background-size:cover;
+	-o-background-size:cover;
+}
+.map .map-body {
+	display:table-cell;
+	vertical-align:middle;
+}
+.map .map-body .brand-heading {
+	font-size:40px;
+}
+.map .map-body .map-text {
+	font-size:18px;
+}
+@media(min-width:768px) {
+	.map {
+		height:100%;
+		padding:0;
+	}
+	.map .map-body .brand-heading {
+		font-size:60px;
+		margin-top:90px;
+		margin-bottom:20px;
+		border-top:2px solid #fff;
+		border-bottom:2px solid #fff;
+		display:inline-block;
+		padding:10px 0;
+	}
+	.map .map-body .map-text {
+		font-size:20px;
+			font-weight:300;
+			letter-spacing:3px;
+	}
+}
+
 .btn-circle {
 	width:50px;
 	height:50px;
