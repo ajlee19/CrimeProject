@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
-<meta name="author" content="Ashley Jieun Lee and Seung Woo Son">
+<meta name="author" content="Ashley Jieun Lee and Seungwoo Son">
 <title>Stayfe</title>
 <!-- Bootstrap Core CSS -->
 <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
@@ -16,6 +16,9 @@
 <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic,700italic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+<!-- include cartodb.js library -->
+<script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+<!-- <script type="text/javascript"></script> -->
 
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -58,7 +61,7 @@
 				</p> -->
 				<p><br></p>
 				<form id = "contactform">
-					<input type="text" name="address" placeholder="ENTER YOUR LOCATION e.g. mission and 18th streets, san francisco">
+					<input type="text" name="address" id="loc" placeholder="ENTER YOUR LOCATION e.g. mission and 18th streets, san francisco">
 				</form>
 				<a href="#single-project" class="btn btn-circle page-scroll">
 				<i class="fa fa-angle-double-down animated"></i>
@@ -72,7 +75,7 @@
 <section id="single-project"> 
 <div class="container content-section text-center">
 	<div>
-	<iframe width="100%" height="650" frameborder="0" src="https://alee19.carto.com/builder/5cc27bd2-7827-11e7-bf0c-0e8c56e2ffdb/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+	<iframe id="mapview" width="100%" height="650" frameborder="0" src="https://alee19.carto.com/builder/5cc27bd2-7827-11e7-bf0c-0e8c56e2ffdb/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
 	</div>
 	<div class="row">
 		<h2><br><br><br>Overview</h2>

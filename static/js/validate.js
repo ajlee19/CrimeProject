@@ -1,6 +1,13 @@
 //////CONTACT FORM VALIDATION
 jQuery(document).ready(function ($) {
 	
+	
+	$("loc").on("keydown",function search(e) {
+	    if(e.keyCode == 13) {
+	        document.getElementById("mapview").scrollIntoView()
+	    }
+	});
+
 	//if submit button is clicked
 	$('#submit').click(function () {		
 		
