@@ -35,7 +35,7 @@ SITE_ID = int(os.environ.get("SITE_ID", 1))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-TEMPLATE_DEBUG = True
+# TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 ROOT_URLCONF = 'crimeproject.urls'
 
