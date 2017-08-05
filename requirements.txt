@@ -2,7 +2,6 @@ awsebcli==3.10.5
 beautifulsoup4==4.6.0
 blessed==1.14.2
 botocore==1.5.92
--e git://github.com/CartoDB/carto-python.git@85c00cc8e0fe9f76119b85702d7dc983837a82e5#egg=carto
 cement==2.8.2
 certifi==2017.4.17
 chardet==3.0.4
@@ -21,7 +20,6 @@ feedfinder2==0.0.4
 feedparser==5.2.1
 future==0.15.2
 idna==2.5
-jieba3k==0.35.1
 jmespath==0.9.3
 lxml==3.8.0
 Markdown==2.6.8
@@ -35,11 +33,6 @@ pandas==0.20.3
 pathspec==0.5.0
 pilkit==2.0
 Pillow==4.2.1
-Pinax==0.9a2
-pinax-blog==6.0.3
-pinax-images==2.0.0
-pinax-pages==0.4.2
-pinax-theme-bootstrap==8.0.1
 psycopg2==2.7.3
 Pygments==2.2.0
 pyrestcli==0.6.3
