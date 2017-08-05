@@ -12,16 +12,16 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 import urllib.parse
-import socket
+# import socket
 
-if socket.get_hostname() == 'stayfe':
-    DEBUG = False
-    TEMPLATE_DEBUG = False
-    #Development Server Settings go here
-else:
-    #Production Server Settings go here
-    DEBUG = False
-    TEMPLATE_DEBUG = False
+# if socket.get_hostname() == 'stayfe':
+#     DEBUG = False
+#     TEMPLATE_DEBUG = False
+#     #Development Server Settings go here
+# else:
+#     #Production Server Settings go here
+#     DEBUG = False
+#     TEMPLATE_DEBUG = False
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
