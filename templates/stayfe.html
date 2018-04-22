@@ -3,23 +3,70 @@
 {% include 'map.html' %}
 {% include 'contacts.html' %}
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1504.83">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #0000ee; -webkit-text-stroke: #0000ee}
-    p.p3 {margin: 0.0px 0.0px 12.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
-    li.li1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #0000ee; -webkit-text-stroke: #0000ee}
-    span.s1 {text-decoration: underline ; font-kerning: none}
-    span.s2 {-webkit-text-stroke: 0px #000000}
-    span.s3 {font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
-    span.s4 {font-kerning: none}
-    ul.ul1 {list-style-type: disc}
-  </style>
-</head>
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="STAY SAFE, WHEREVER YOU ARE">
+		<meta name="author" content="Ashley Jieun Lee and Seungwoo Son">
+
+		<title>Stayfe</title>
+
+		<!-- Bootstrap core CSS -->
+		<link href="{%static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+		<!-- Custom fonts for this template -->
+		<link href="{%static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+		<link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+		<!-- Custom styles for this template -->
+		<link href="{% static 'css/grayscale.css' %}"" rel="stylesheet">
+
+	</head>
+
+	<body id="page-top">
+
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+			<div class="container">
+				<a class="navbar-brand js-scroll-trigger" href="#page-top"> S T A Y F E </a>
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					Menu
+					<i class="fa fa-bars"></i>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="#about">About Us</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="#download">Map</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+
+		<!-- Bootstrap core JavaScript -->
+		<script src="{%static 'vendor/jquery/jquery.min.js' %}"></script>
+		<script src="{%static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+		<!-- Plugin JavaScript -->
+		<script src="{%static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+		<!-- Custom scripts for this template -->
+		<script src="{% static 'js/grayscale.js' %}"></script>
+
+	</body>
+
 </html>

@@ -2,100 +2,72 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="Ashley Jieun Lee and Seungwoo Son">
-<title>Stayfe</title>
-<!-- Bootstrap Core CSS -->
-<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-<!-- Custom CSS -->
-<link href="{% static 'css/theme.css' %}" rel="stylesheet">
-<!-- Custom Fonts -->
-<link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic,700italic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-</head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+	<head>
 
-<!-- Navigation -->
-<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-<div class="container">
-	<div class="navbar-header">
-		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-		<i class="fa fa-bars"></i>
-		</button>
-		<a class="navbar-brand page-scroll" href="stayfe.html"> STAYFE </a>
-	</div>
-	<!-- Collect the nav links, forms, and other content for toggling -->
-	<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-		<ul class="nav navbar-nav">
-			<li>
-			<a href="aboutus.html">About Us</a>
-			</li>
-			<li>
-			<a href="map.html">Map</a>
-			</li>
-			<li>
-			<a href="contacts.html">Contacts</a>
-			</li>
-		</ul>
-	</div>
-	<!-- /.navbar-collapse -->
-</div>
-<!-- /.container -->
-</nav>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="STAY SAFE, WHEREVER YOU ARE">
+		<meta name="author" content="Ashley Jieun Lee and Seungwoo Son">
 
+		<title>Stayfe</title>
 
-<!-- Intro Header -->
-<header class="intro">
-<div class="intro-body">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
-				<h1 class="brand-heading">&nbsp; &nbsp; S T A Y F E &nbsp; &nbsp;</h1>
-				<h2 class="intro-text">
-					<br>STAY SAFE, WHEREVER YOU ARE.<br><br>
-				</h2>
-				<h5>
-					<br><br>Created by Seungwoo Son and Ashley Jieun Lee
-				</h5>
-				<a href="#about" class="btn btn-circle page-scroll">
-				<i class="fa fa-angle-double-down animated"></i>
-				</a>
+		<!-- Bootstrap core CSS -->
+		<link href="{%static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+		<!-- Custom fonts for this template -->
+		<link href="{%static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+		<link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+		<!-- Custom styles for this template -->
+		<link href="{% static 'css/grayscale.css' %}"" rel="stylesheet">
+
+	</head>
+
+	<body id="page-top">
+		<!-- Intro Header -->
+		<header class="masthead" id="about">
+			<div class="intro-body">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 mx-auto">
+							<h1 class="brand-heading"> S T A Y F E </h1>
+							<h2 class="intro-text"> <br>STAY SAFE, WHEREVER YOU ARE </h2>
+							<p class="intro-text">Created by Ashley Jieun Lee and Seungwoo Son<br><br></p>
+							<a href="#intro" class="btn btn-circle js-scroll-trigger">
+								<i class="fa fa-angle-double-down animated"></i>
+							</a>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>
-</div>
-</header>
+		</header>
 
-<!-- About Section -->
-<section id="about">
-<div class="container content-section text-center">
-	<div class="row">
-		<h2>About Us</h2>
-		<div class="col-lg-8 col-lg-offset-2">
-			<p>
-				<br>We are college students studying computer science at MIT and UC Berkeley.<br><br>
-				Everyday there are all kinds of crimes happening around us. Our mission is to provide the most comprehensive real time crime data so that our users can easily visualize the risk of any location.<br>
-			</p>
-		</div>
-	</div>
-</div>
-</section>
+		<!-- Intro Body -->
+		<section id = "intro">
+			<div class="section-body text-center">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 mx-auto">
+							<p>We are undergraduates studying computer science at MIT and UC Berkeley.<br><br>
+								 Everyday there are all kinds of crimes happening around us. Our mission is to provide the most comprehensive real time crime data so that our users can easily visualize the risk of any location.
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-<!-- jQuery -->
-<script src="{% static 'js/jquery.js' %}"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="{% static 'js/bootstrap.min.js' %}"></script>
-<!-- Plugin JavaScript -->
-<script src="{% static 'js/jquery.easing.min.js' %}"></script>
-<!-- Contact JavaScript -->
-<script src="{% static 'js/validate.js' %}"></script>
-<!-- Custom Theme JavaScript -->
-<script src="{% static 'js/theme.js' %}"></script>
-</body>
+		<!-- Bootstrap core JavaScript -->
+		<script src="{%static 'vendor/jquery/jquery.min.js' %}"></script>
+		<script src="{%static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+		<!-- Plugin JavaScript -->
+		<script src="{%static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+		<!-- Custom scripts for this template -->
+		<script src="{% static 'js/grayscale.js' %}"></script>
+
+	</body>
+
 </html>

@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "django.contrib.sites",
     "crimeproject", 
-    "visualizemap",
+    # "visualizemap",
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -57,8 +57,12 @@ MIDDLEWARE_CLASSES = [
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [ ]
+# STATICFILES_DIRS = [ ]
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # List of finder classes that know how to find static files in
 # various locations.
 STATICFILES_FINDERS = [
@@ -71,7 +75,6 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'templates'),
-            os.path.join(BASE_DIR, 'visualizemap/templates/visualizemap'),
         ],
         "APP_DIRS": False,
         "OPTIONS": {
@@ -84,7 +87,6 @@ TEMPLATES = [
                 "django.template.context_processors.tz",
                 "django.template.context_processors.request",
                 "django.contrib.messages.context_processors.messages",
-                "crimeproject.context_processors.settings",
             ],
         },
     },
